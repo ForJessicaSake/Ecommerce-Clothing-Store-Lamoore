@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.blogs {
+    margin: 8% 5%;
+    align-items: center;
+}
+
+.practice {
+    margin: 10% 5%;
+    align-items: center;
+}
+
+.blog-preview {
+    margin: 3%;
+    line-height: 1.2;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    cursor: pointer;
+}
+
+.blog-preview:hover {
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.link h2 {
+    color: #f1356d
+}
+
+.pending {
+    margin: 3%;
+    line-height: 1.2;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    cursor: pointer;
+}
+
+.error {
+    margin: 3%;
+    line-height: 1.2;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    cursor: pointer;
+}
+
+.blog-title {
+    margin-bottom: 2%;
+    color: #f1356d
+}
+
+.blog-body {
+    line-height: 2;
+    text-align: justify;
+}
+
+.blog-author {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 7%;
+    color: #f1356d
+}
+
+.nav-links {
+    width: 330px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.15rem;
+}
+
+.nav-links a {
+    list-style: none;
+    text-decoration: none;
+    color: black
+}
+
+.btn {
+    color: white;
+    padding: 5px;
+    width: 90px;
+    border: 0px;
+    border-radius: 5px;
+}
+
+.delete-btn {
+    color: white;
+    padding: 8px;
+    width: 100px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: #f1356d
+}
+
+.form-container {
+    display: flex;
+}
+
+.form {
+    margin: 5% auto;
+    display: inherit;
+    flex-direction: column;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-bottom: 2%;
+    line-height: 2em;
+}
+
+input {
+    height: 3em;
+    padding: 5px;
+}
+
+select {
+    height: 2.6em;
+    text-align: center;
+    padding: 5px;
+}
+
+textarea {
+    height: 6em;
+    margin-bottom: 5%;
+    padding: 15px;
+}
+
+.submitbutton {
+    height: 2.5em;
+    width: 120px;
+    margin: auto;
+    background-color: #f1356d;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    margin-top: 5%
+}
+
+.notfound {
+    margin-top: 6%;
+    line-height: 3;
+}
