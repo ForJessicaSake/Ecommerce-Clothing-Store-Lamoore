@@ -1,25 +1,39 @@
-import Navbar from './Navbar';
-import Blogs from './Blogs';
-import BlogList from './BlogList'
-import Create from './Create'
+import { useState, createContext } from 'react'
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Cart from './components/Cart';
+import Product from './components/Product'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import NotFound from './NotFound';
+
+export const stateContext = createContext();
 
 function App() {
 
+  const [count, setCount] = useState(0);
+  const [search, setSearch] = useState('');
+
+
+  const increment = () => {
+    setCount(count + 1)
+  }
+
+  const decrement = () => {
+    setCount(count - 1)
+  }
   return (
-    <section className="components">
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Blogs />} />
-          <Route path='/blogs/:id' element={<BlogList />} />
-          <Route path='/create' element={<Create />} />
-          <Route path='/create' element={<Create />} />
-          <Route path='*' element={<NotFound/>} />
-        </Routes>
-      </Router>
-    </section>
+    <stateContext.Provider value={{count, increment, decrement, search, setSearch}}>
+      <section className="App">
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Hero/>} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/product'element ={<Product />}/>
+          </Routes>
+        </Router>
+
+      </section>
+    </stateContext.Provider>
 
   )
 }
