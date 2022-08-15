@@ -1,14 +1,14 @@
-import girl from '../Images/girl.png';
+import group from '../Images/lorde.jpg';
 function Hero() {
     return (
         <header className='hero'>
-            <section >
-                <img src={girl} alt='fashion-image' />
-            </section>
             <section className='hero-text'>
-                <h2> 50% OFF YOUR NEXT PURCHASE AND A NEXT-DAY FREE DELIVERY!</h2>
-                <h4>With code 3000</h4>
-                <button>Shop now</button>
+                <h1 className='heading'>Your clothing lifestyle starts here.</h1>
+                <p>Reveal yourself, Reveal the world for yourself.</p>
+                <button className='btn'>Catalog</button>
+            </section>
+            <section className='image-section' >
+                <img src={group} alt='group of ladies' className='group-image' />
             </section>
         </header>
     )

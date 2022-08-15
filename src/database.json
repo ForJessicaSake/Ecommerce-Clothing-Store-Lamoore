@@ -1,0 +1,19 @@
+{
+    "News": [{
+
+        "id": 1,
+        "title": "Inside Lamoore: Our members and plans",
+        "content": "Today, Ukraine fashion designers ejoy well- deserved recognition around the world.Ruslan Baginskly hats are beloved by almost every celebrity, from the icon - Madonna, to the younger stars like Bella Hadid and Taylor Swift...",
+        "readmore": "Read More",
+        "image": "./Images/express.jpg"
+    }, {
+
+        "id": 2,
+        "article": "Lamoore is a boom in quiet fashion entrepreneurship in Ukraine",
+        "content": "Her  Photo was taken in 1952 at The New Yoker, Bill captioned a black and white photo and her grandmother sitting at dinner in the black dress, which featured buttons down the front..",
+        "readmore": "Read More",
+        "image": "./Images/teens.jpg"
+
+    }]
+
+}
