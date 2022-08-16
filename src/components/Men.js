@@ -10,7 +10,7 @@ function Men() {
       <h1>Catalogue</h1>
       <section className="catalogue-display-one">
         {error && <p>{error}</p>}
-        {isPending && <h4>...Loading</h4>}
+        {isPending && <h4>...</h4>}
         {products &&
           products.map((product) => (
             <section key={product.id} className="product-display">

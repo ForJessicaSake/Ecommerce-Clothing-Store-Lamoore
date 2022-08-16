@@ -9,7 +9,7 @@ function Women() {
         <h1>Catalogue</h1>
       <section className="catalogue-display">
         {error && <p>{error}</p>}
-        {isPending && <h4>...Loading</h4>}
+        {isPending && <h4>...</h4>}
         {products && products.map((product) => (
           <section key={product.id} className='product-display'>
             <img src={product.image} alt = 'clothes'/>
