@@ -1,22 +1,15 @@
 import React from 'react'
-import UseFetch from './UseFetch.js'
 
 function News() {
-    const { data: news, error, isPending } = UseFetch("https://ecommerce-database-app.herokuapp.com/")
     return (
         <main className='news' id = 'news'>
-            <h1 className='heading'>News</h1>
-            {isPending && <h1>....</h1>}
-            {error && <p>{error}</p>}
-            {news && news.map((news) => (
-                <section className='news-dispaly' key={news.id}>
+            <h1 className='news-heading'>News</h1>
+                <section className='news-dispaly'>
                     <div>
-                        <h3>{news.title}</h3>
-                        <p>{news.content}</p>
-                        <h5>{news.readmore}</h5>
+                        <h4>Lamoore is a boom in quiet fashion entrepreneurship in Nigeria</h4>
+                    <p>Today, fashion designers enjoy well-deserved recognition around the world. Ruslan Baginskly hats are beloved by almost every celebrity, from the icon - Madonna, to the younger stars like Bella Hadid and Taylor Swift. Her Photo was taken in 1952 at The New Yoker, Bill captioned a black and white photo and her grandmother sitting at dinner in the black dress, which featured buttons down the front..</p>
                     </div>
                 </section>
-            ))}
         </main>
     )
 }

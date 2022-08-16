@@ -1,4 +1,4 @@
-import { useContext, useState} from 'react'
+import { useContext, useState } from 'react'
 import { StateContext } from '../App'
 import { Link } from 'react-router-dom'
 
@@ -24,14 +24,14 @@ function Navbar() {
                 <section className='links'>
                     <ul>
                         <Link to='/'><li>Home</li></Link>
-                        <Link to='/men'> <li>Men</li></Link>
                         <Link to='/women'><li>Women</li></Link>
+                        <Link to='/men'> <li>Men</li></Link>
                         <Link to='/accessories'><li>Accessories</li></Link>
                     </ul>
                 </section>
 
                 <section className='nav-icons'>
-                    <div className='cart'><BsCart3 className='cart-icon' /><span>{count}</span></div>
+                    <Link to='/cart' className='cart'><BsCart3 className='cart-icon' style={{ color: '#161616' }} /><span style={{ color:'red' }}>{count}</span></Link>
 
                 </section>
                 <section className="hamburger" onClick={handleToggle}>
