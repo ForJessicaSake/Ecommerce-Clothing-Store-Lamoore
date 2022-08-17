@@ -347,6 +347,8 @@
     .cart-item button {
         width: 25px;
         font-size: 1rem;
+        border: 0px;
+        border-radius: 5px;
     }
     
     .size {
@@ -399,6 +401,25 @@
     .cart-item img {
         width: 10%;
         height: 9rem;
+    }
+    /*==================NOT FOUND CSS=============*/
+    
+    .page-error {
+        text-align: center;
+        margin-top: 15%;
+    }
+    
+    .page-error h1 {
+        font-size: 7rem;
+        color: lightslategray;
+    }
+    
+    .page-error h2 {
+        font-size: 2rem;
+    }
+    
+    .page-error p {
+        font-size: 1rem;
     }
     /*===========================================================MEDIA QUERIES- NAVBAR FOR ALL SCREENS=============================================*/
     
@@ -466,16 +487,16 @@
             font-size: 2rem;
         }
         .navigation h1 {
-            font-size: 1.8rem;
+            font-size: 1.3rem;
         }
         .cart {
             position: absolute;
             top: 600px;
-            left: 25px;
+            left: 17px;
             width: 300px;
         }
         .navigation span {
-            font-size: 1.2rem;
+            font-size: 0.9rem;
         }
         .nav-logo {
             position: absolute;
@@ -499,6 +520,7 @@
             justify-content: center;
             text-align: center;
             top: 80px;
+            right: 20px;
         }
         .links ul {
             display: flex;
@@ -507,7 +529,7 @@
         }
         .links li {
             padding: 15% 0%;
-            font-size: 1.65rem;
+            font-size: 1.5rem;
         }
     }
     
@@ -2430,8 +2452,8 @@
             width: 100%;
         }
         .cart-item button {
-            width: 20px;
-            font-size: 1.2rem;
+            width: 15px;
+            font-size: 0.8rem;
         }
         .size {
             font-size: 1.1rem;
@@ -2445,7 +2467,7 @@
         }
         .counter {
             display: flex;
-            width: 60px;
+            width: 50px;
             justify-content: space-between;
             margin-bottom: 5%;
         }
@@ -2453,14 +2475,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            row-gap: 100px;
-            font-size: 1rem;
+            row-gap: 80px;
+            font-size: 0.9rem;
             width: 100px;
         }
         .fee {
             margin-top: 4%;
             margin-bottom: 2%;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
         .cart-btn {
             width: 86vw;
@@ -2471,17 +2493,17 @@
         }
         .cart-content h4 {
             margin-bottom: 5%;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             width: 95%;
         }
         .cart-content p {
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
         .cart-content {
             width: 80%;
         }
         .cart-item img {
-            width: 4rem;
+            width: 3rem;
             height: 3rem;
         }
     }
@@ -2708,11 +2730,11 @@
             width: 100%;
         }
         .cart-item button {
-            width: 20px;
-            font-size: 1rem;
+            width: 12px;
+            font-size: 0.6rem;
         }
         .size {
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             display: flex;
             justify-content: space-between;
         }
@@ -2723,7 +2745,7 @@
         }
         .counter {
             display: flex;
-            width: 60px;
+            width: 40px;
             justify-content: space-between;
             margin-bottom: 5%;
         }
@@ -2731,14 +2753,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            row-gap: 100px;
-            font-size: 1rem;
+            row-gap: 50px;
+            font-size: 0.8rem;
             width: 100px;
         }
         .fee {
             margin-top: 4%;
             margin-bottom: 2%;
-            font-size: 1.5rem;
+            font-size: 1.1rem;
         }
         .cart-btn {
             width: 86vw;
@@ -2749,18 +2771,18 @@
         }
         .cart-content h4 {
             margin-bottom: 5%;
-            font-size: 0.7rem;
+            font-size: 0.5rem;
             width: 95%;
         }
         .cart-content p {
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
         .cart-content {
-            width: 80%;
+            width: 81%;
         }
         .cart-item img {
-            width: 3rem;
-            height: 3rem;
+            width: 2rem;
+            height: 2rem;
         }
     }
     

@@ -5,6 +5,7 @@ import men from '../Images/men.png'
 import { BsArrowRight } from 'react-icons/bs'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import {Link} from 'react-router-dom'
 
 
 function Catalog() {
@@ -23,7 +24,7 @@ function Catalog() {
                     <div>
                         <img src={men} alt='men' className='product-image' data-aos="fade-right" data-aos-duration="800" data-aos-delay="50" data-aos-easing="linear" />
                         <div className='ct'>
-                            <h3>For Men</h3>
+                           <Link to ='/men'><h3>For Men</h3></Link>
                             <BsArrowRight className='arr' />
                         </div>
 
@@ -32,12 +33,13 @@ function Catalog() {
                         <img src={ladies} alt='woman' className='product-image' data-aos="fade-up" data-aos-duration="800" data-aos-delay="50" data-aos-easing="linear" />
 
                         <div className='ct'>
-                            <h3>For Ladies</h3>
+                            <Link to='/women'><h3>For Ladies</h3></Link>
                             <BsArrowRight className='arr' /></div>
                     </div>
                     <div>
                         <img src={teens} alt='teens' className='product-image' data-aos="fade-left" data-aos-duration="800" data-aos-delay="50" data-aos-easing="linear" />
-                        <div className='ct'><h3>Unisex</h3>
+                        <div className='ct'>
+                            <Link to='/accessories'><h3>Unisex</h3></Link>
                             <BsArrowRight className='arr' />
                         </div>
 
