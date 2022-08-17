@@ -1,4 +1,4 @@
-import { useState, useEffect, useReducer } from 'react'
+import { useState, useEffect} from 'react'
 
 function UseFetch(url) {
 
@@ -6,37 +6,18 @@ function UseFetch(url) {
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
     const [isPending, setIsPending] = useState(true);
-    const [cart, setCart] = useState(null)
+    const [cart, setCart] = useState([])
 
 
-    // const reducer = (state, action) => {
-    //     switch (action.type) {
-    //         case "Increment": return count + 1;
-    //         case "Decrement": return count - 1;
-    //         default: throw new Error();
-    //     }
-    // }
-    // const ACTION = {
-    //     INCREMENT: "Increment",
-    //     DECREMENT: "Decrement"
-    // }
 
-    // const [count, dispatch] = useReducer(reducer,  0 )
-  
-    // const increment = () => {
-    //     dispatch({type: ACTION.INCREMENT})
-    // }
-
-    // const decrement = () => {
-    //     dispatch({ type: ACTION.DECREMENT })
-    // }
-const handleCart =(e)=>{
-    const cartItems ={data};
-    console.log(); 
-    setCount(count + 1)
-
-
+const addToCart = (data) =>{
+    setCart([...cart, data])
 }
+ const removeCart = (id) =>{
+    const _cart = cart.filter((crt)=>{ return crt.id !== id})
+    setCart(_cart);
+ }
+
         const increment = () => {
         setCount(count + 1)
     }
@@ -63,7 +44,7 @@ const handleCart =(e)=>{
             })
     }, [url])
     return (
-        { count, isPending, error, data, increment, decrement }
+        { count, isPending, error, data, increment, decrement, addToCart, removeCart, cart, setCart }
     )
 }
 

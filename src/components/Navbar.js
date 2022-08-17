@@ -8,7 +8,7 @@ import { ImCancelCircle } from 'react-icons/im'
 
 
 function Navbar() {
-    const { count } = useContext(StateContext)
+    const { cart } = useContext(StateContext)
     const [toggle, setToggle] = useState(false)
 
     const handleToggle = () => {
@@ -27,13 +27,11 @@ function Navbar() {
                         <Link to='/women'><li>Women</li></Link>
                         <Link to='/men'> <li>Men</li></Link>
                         <Link to='/accessories'><li>Accessories</li></Link>
+                        <Link to='/cart' className='cart'><li>Cart<BsCart3 className='cart-icon' style={{ color: '#f8f8f8' }} /><span style={{ color: 'yellow' }}>{cart.length}</span></li></Link>
                     </ul>
                 </section>
 
-                <section className='nav-icons'>
-                    <Link to='/cart' className='cart'><BsCart3 className='cart-icon' style={{ color: '#161616' }} /><span style={{ color:'red' }}>{count}</span></Link>
 
-                </section>
                 <section className="hamburger" onClick={handleToggle}>
                     {toggle ? <ImCancelCircle style={{ color: '#969696' }} /> : <AiOutlineMenu />}
                 </section>

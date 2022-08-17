@@ -1,43 +1,16 @@
 import { useContext } from 'react'
 import { StateContext } from '../App'
 
+
 function Women() {
-  const { data: products, increment, error, isPending } = useContext(StateContext);
+
+  const { data: products, error, isPending, cart, addToCart, removeCart} = useContext(StateContext);
 
   return (
     <header className="catalogue-wrapper">
       <h1>Catalogue</h1>
       <h6 className="subtitle">Home/Women/<span style={{ color: '#161616' }}>Accessories</span></h6>
-      <section className="filters">
-        <select>
-          <option value='Women'>Women</option>
-        </select>
-        <select>
-          <option value='price'>Price</option>
-          <option value='price'>$50</option>
-          <option value='price'>$100</option>
-          <option value='price'>$300</option>
-          <option value='price'>$500</option>
-          <option value='price'>$1000</option>
-
-        </select>
-        <select>
-          <option value='color'>Color</option>
-          <option value='color'>black</option>
-          <option value='color'>blue</option>
-          <option value='color'>pink</option>
-          <option value='color'>white</option>
-          <option value='color'>red</option>
-        </select>
-        <select>
-          <option value='size'>Size</option>
-          <option value='color'>6</option>
-          <option value='color'>8</option>
-          <option value='color'>12</option>
-          <option value='color'>14</option>
-          <option value='color'>16</option>
-        </select>
-      </section>
+    
       <section className="catalogue-display">
         {error && <p>{error}</p>}
         {isPending && <h4>...</h4>}
@@ -46,11 +19,20 @@ function Women() {
             <img src={product.image} alt='clothes' />
             <p>{product.title}</p>
             <h4>${product.price}</h4>
-            <button className='btn' onClick={increment}>Add to Cart</button>
+            {cart.filter((crt) => crt.id === product.id).length === 0 ? (
+              <button className="btn" onClick={() => addToCart(product)}>
+                Add to Cart
+              </button>
+            ) : (
+              <button onClick={() => removeCart(product.id)} className="btn">
+                Remove From Cart
+              </button>
+            )}
           </section>
         ))}
       </section>
-    </header>)
+    </header>
+    )
 }
 
 export default Women
