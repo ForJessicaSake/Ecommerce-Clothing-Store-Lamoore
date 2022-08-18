@@ -19,6 +19,7 @@ function Navbar() {
             <main className={toggle ? 'navigation expanded' : 'navigation'}>
                 <section className='nav-logo'>
                     <h1>La<span style={{ color: '#969696' }}>Moore</span></h1>
+
                 </section>
 
                 <section className='links'>

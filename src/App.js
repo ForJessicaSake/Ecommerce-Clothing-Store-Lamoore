@@ -14,12 +14,12 @@ export const StateContext = createContext();
 
 function App() {
 
-  const { error, isPending, data, count, cart, setCart, addToCart, removeCart, increment, decrement} = UseFetch("https://fakestoreapi.com/products/category/women's clothing")
+  const { error, isPending, data, count, cart, setCart, addToCart, removeCart, increment, decrement, quantity, total} = UseFetch("https://fakestoreapi.com/products/category/women's clothing")
 
  
 
   return (
-    <StateContext.Provider value={{ error, isPending, data, count,  cart, setCart, addToCart, removeCart, increment, decrement }}>
+    <StateContext.Provider value={{ error, isPending, data, count,  cart, setCart, addToCart, removeCart, increment, decrement, quantity, total }}>
       <section className="App">
         <Router>
           <Navbar />

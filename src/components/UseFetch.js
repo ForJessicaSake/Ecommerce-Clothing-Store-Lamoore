@@ -1,4 +1,4 @@
-import { useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 
 function UseFetch(url) {
 
@@ -7,20 +7,35 @@ function UseFetch(url) {
     const [error, setError] = useState(null);
     const [isPending, setIsPending] = useState(true);
     const [cart, setCart] = useState([])
+    const [quantity, setQuantity] = useState(0)
 
 
 
-const addToCart = (data) =>{
-    setCart([...cart, data])
-}
- const removeCart = (id) =>{
-    const _cart = cart.filter((crt)=>{ return crt.id !== id})
-    setCart(_cart);
- }
 
-        const increment = () => {
-        setCount(count + 1)
+    const addToCart = (data) => {
+        setCart([...cart, data])
     }
+    const removeCart = (id) => {
+        const _cart = cart.filter((crt) => { return crt.id !== id })
+        setCart(_cart);
+    }
+
+    const total = (price) => {
+        cart.reduce((acc, price) => {
+            return acc + price
+        }, 0)
+
+    }
+
+    // const increment = (id) => {
+    //     const value = cart.map((crt) => {
+    //         if (crt.id === id) {
+    //             console.log( crt.length)
+    //         }
+    //         return [...cart, crt.length]
+    //     })
+    //     setQuantity(value)}
+
 
     const decrement = () => {
         setCount(count - 1)
@@ -43,9 +58,7 @@ const addToCart = (data) =>{
                 setIsPending(false)
             })
     }, [url])
-    return (
-        { count, isPending, error, data, increment, decrement, addToCart, removeCart, cart, setCart }
-    )
+    return ({ count, isPending, error, data, decrement, addToCart, removeCart, cart, setCart, quantity, total })
 }
 
 export default UseFetch;
