@@ -18,13 +18,6 @@ function UseFetch(url) {
     }
 
 
-    const totalPrice = cart.map((product) => {
-        return (product.price).reduce((acc, curr) => {
-            return acc + curr
-        }, 0)
-    })
-
-
     const decrement = () => {
         setCount(count - 1)
     }
@@ -47,7 +40,7 @@ function UseFetch(url) {
             })
     }, [url])
 
-    return ({ count, isPending, error, data, decrement, addToCart, removeCart, cart, setCart, totalPrice })
+    return ({ count, isPending, error, data, decrement, addToCart, removeCart, cart, setCart })
 }
 
 export default UseFetch;

@@ -4,7 +4,7 @@ import { StateContext } from '../App'
 
 function Women() {
 
-  const { data: products, error, isPending, cart, addToCart, removeCart} = useContext(StateContext);
+  const { data:products, error, isPending, cart, addToCart, removeCart} = useContext(StateContext);
 
   return (
     <header className="catalogue-wrapper">

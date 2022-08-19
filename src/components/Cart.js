@@ -13,10 +13,6 @@ function Cart() {
           <img src={cart.image} alt='clothes'/>
           <section className='cart-content'>
             <h4>{cart.title}</h4>
-            {/* <div className='counter'>
-              <button onClick={increment}>+</button>
-              <p>{quantity}</p>
-              <button onClick={decrement}>-</button></div> */}
             <div className='size'>
               <h5>Size: 6-16</h5>
             </div>
