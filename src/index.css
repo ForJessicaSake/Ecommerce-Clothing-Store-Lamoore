@@ -121,7 +121,7 @@
     .arr {
         align-items: center;
     }
-    /*==========================About CSS=======================*/
+    /*=================================About CSS===================================*/
     
     .about {
         padding: 2% 8% 0% 8%;
@@ -429,7 +429,7 @@
     }
     
     .checkout p {
-        font-size: 2em;
+        font-size: 1.2rem;
         color: lightslategray;
     }
     
