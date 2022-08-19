@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { StateContext } from '../App';
+import { Link } from 'react-router-dom';
 
 function Cart() {
   const { cart, removeCart} = useContext(StateContext);
@@ -28,7 +29,7 @@ function Cart() {
       ))}
       <p className='fee'>Shopping Fee: $10</p>
       {/* <h3 className='fee'>Total: {totalPrice}</h3> */}
-      <button className='cart-btn'>Checkout</button>
+      <button className='cart-btn'><Link to='/checkout'>Checkout</Link></button>
     </main>)
 }
 

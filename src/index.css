@@ -421,6 +421,21 @@
     .page-error p {
         font-size: 1rem;
     }
+    /*==================NOT FOUND CSS=============*/
+    
+    .checkout {
+        text-align: center;
+        margin-top: 15%;
+    }
+    
+    .checkout p {
+        font-size: 2em;
+        color: lightslategray;
+    }
+    
+    .checkout h3 {
+        font-size: 1rem;
+    }
     /*===========================================================MEDIA QUERIES- NAVBAR FOR ALL SCREENS=============================================*/
     
     @media only screen and (max-width:320px) and (min-width:250px) {
@@ -1112,6 +1127,9 @@
             width: 8%;
             height: 7rem;
         }
+        .checkout h3 {
+            font-size: 1rem;
+        }
     }
     
     @media only screen and (max-width:1024px) and (min-width:918px) {
@@ -1384,6 +1402,9 @@
         .cart-item img {
             width: 7%;
             height: 5rem;
+        }
+        .checkout h3 {
+            font-size: 2rem;
         }
     }
     
@@ -1666,6 +1687,9 @@
             width: 5rem;
             height: 5rem;
         }
+        .checkout h3 {
+            font-size: 1rem;
+        }
     }
     /*===========================================================MEDIA QUERIES FOR MEDIUM SCREENS==================================================*/
     
@@ -1944,6 +1968,12 @@
         .cart-item img {
             width: 4rem;
             height: 4rem;
+        }
+        .checkout h3 {
+            font-size: 1.2rem;
+        }
+        .checkout p {
+            font-size: 1.5rem;
         }
     }
     

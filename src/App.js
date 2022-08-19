@@ -1,13 +1,14 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import UseFetch from './components/UseFetch';
+import { createContext } from 'react';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Cart from './components/Cart';
 import Women from './components/Women';
 import Men from './components/Men';
 import Accessories from './components/Accessories';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import UseFetch from './components/UseFetch';
-import { createContext } from 'react'
 import NotFound from './components/NotFound';
+import Checkout from './components/Checkout';
 
 
 export const StateContext = createContext();
@@ -30,6 +31,7 @@ function App() {
             <Route path='/women' element={<Women/>} />
             <Route path='/accessories' element={<Accessories />} />
             <Route path='/cart' element={<Cart />} />
+            <Route path= '/checkout' element={<Checkout/>}/>
             <Route path ='*' element={<NotFound/>}/>
           </Routes>
         </Router>
