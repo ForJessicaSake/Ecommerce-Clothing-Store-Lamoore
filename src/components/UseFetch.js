@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 
 function UseFetch(url) {
 
-    const [count, setCount] = useState(0);
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
     const [isPending, setIsPending] = useState(true);
@@ -17,10 +16,6 @@ function UseFetch(url) {
         setCart(_cart);
     }
 
-
-    const decrement = () => {
-        setCount(count - 1)
-    }
 
     useEffect(() => {
 
@@ -40,7 +35,7 @@ function UseFetch(url) {
             })
     }, [url])
 
-    return ({ count, isPending, error, data, decrement, addToCart, removeCart, cart, setCart })
+    return ({ isPending, error, data, addToCart, removeCart, cart, setCart })
 }
 
 export default UseFetch;
