@@ -802,7 +802,7 @@
             height: 0px;
         }
         .expanded {
-            height: 150vh;
+            height: 180vh;
             background-color: #161616;
         }
         .expanded .links {

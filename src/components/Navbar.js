@@ -13,6 +13,9 @@ function Navbar() {
     const handleToggle = () => {
         setToggle(!toggle)
     }
+    const handleLink = ()=>{
+        setToggle(false)
+    }
 
     return (
         <nav>
@@ -21,7 +24,7 @@ function Navbar() {
                     <h1>La<span style={{ color: '#969696' }}>Moore</span></h1>
                 </section>
 
-                <section className='links'>
+                <section className='links' onClick={handleLink}>
                     <ul>
                         <Link to='/'><li>Home</li></Link>
                         <Link to='/women'><li>Women</li></Link>
