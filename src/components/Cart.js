@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { StateContext } from '../App';
 
 function Cart() {
-  const { cart, increment, decrement, removeCart, quantity, total} = useContext(StateContext);
+  const { cart, removeCart} = useContext(StateContext);
 
   return (
     <main className="cart-wrapper">
@@ -13,10 +13,10 @@ function Cart() {
           <img src={cart.image} alt='clothes'/>
           <section className='cart-content'>
             <h4>{cart.title}</h4>
-            <div className='counter'>
+            {/* <div className='counter'>
               <button onClick={increment}>+</button>
               <p>{quantity}</p>
-              <button onClick={decrement}>-</button></div>
+              <button onClick={decrement}>-</button></div> */}
             <div className='size'>
               <h5>Size: 6-16</h5>
             </div>
@@ -31,7 +31,7 @@ function Cart() {
         </section>
       ))}
       <p className='fee'>Shopping Fee: $10</p>
-      <h3 className='fee'>Total: {total(cart.price)}</h3>
+      {/* <h3 className='fee'>Total: {totalPrice}</h3> */}
       <button className='cart-btn'>Checkout</button>
     </main>)
 }

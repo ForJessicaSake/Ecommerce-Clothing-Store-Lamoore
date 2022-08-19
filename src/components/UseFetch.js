@@ -7,9 +7,6 @@ function UseFetch(url) {
     const [error, setError] = useState(null);
     const [isPending, setIsPending] = useState(true);
     const [cart, setCart] = useState([])
-    const [quantity, setQuantity] = useState(0)
-
-
 
 
     const addToCart = (data) => {
@@ -20,21 +17,12 @@ function UseFetch(url) {
         setCart(_cart);
     }
 
-    const total = (price) => {
-        cart.reduce((acc, price) => {
-            return acc + price
+
+    const totalPrice = cart.map((product) => {
+        return (product.price).reduce((acc, curr) => {
+            return acc + curr
         }, 0)
-
-    }
-
-    // const increment = (id) => {
-    //     const value = cart.map((crt) => {
-    //         if (crt.id === id) {
-    //             console.log( crt.length)
-    //         }
-    //         return [...cart, crt.length]
-    //     })
-    //     setQuantity(value)}
+    })
 
 
     const decrement = () => {
@@ -58,7 +46,8 @@ function UseFetch(url) {
                 setIsPending(false)
             })
     }, [url])
-    return ({ count, isPending, error, data, decrement, addToCart, removeCart, cart, setCart, quantity, total })
+
+    return ({ count, isPending, error, data, decrement, addToCart, removeCart, cart, setCart, totalPrice })
 }
 
 export default UseFetch;

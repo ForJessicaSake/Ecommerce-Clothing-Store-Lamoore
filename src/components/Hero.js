@@ -3,12 +3,12 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react'
 
+
 function Hero() {
-
     useEffect(() => {
-        AOS.init();
+            AOS.init();
 
-    })
+        })
 
     return (
         <header className='hero'>
@@ -25,7 +25,7 @@ function Hero() {
                 >Catalog</button>
             </section>
             <section className='image-section' data-aos="fade-left" data-aos-duration="800" data-aos-delay="50" data-aos-easing="linear" >
-                <img src={group} alt='group of ladies' className='group-image' />
+                <img src={group} alt='group of ladies' className='group-image'/>
             </section>
         </header>
     )
