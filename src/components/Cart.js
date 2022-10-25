@@ -27,7 +27,7 @@ function Cart() {
         </section>
       ))}
       <p className='fee'>Shopping Fee: $10</p>
-      <h3 className='fee'>Total: ${cart.reduce((total, cart) => {return cart.price + 10 + total}, 0)}</h3>
+      <h3 className='fee'>Total: ${cart.reduce((total, cart) => {return cart.price + total},  + 10)}</h3>
       <button className='cart-btn'>Checkout</button>
     </main>)
 }
